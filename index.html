@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.core.min.css" integrity="sha512-tYKqO78H3mRRCHa75fms1gBvGlANz0JxjN6fVrMBvWL+vOOy200npwJ69OBl9XEsTu3yVUvZNrdWFIIrIf8FLg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.theme.min.css" integrity="sha512-8vDOoSF7kZUYkn7BiQulRCTvpRoenljlkQDZhM6+IqDJi5jHDH9QEYH9NfMBB8LlqiYc7O17YGxbGx7dOxKrpw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body style="background-color: black;">
+    <div id="intro" class="glide">
+      <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides">
+          <li class="slider__frame glide__slide">0</li>
+          <li class="slider__frame glide__slide">1</li>
+          <li class="slider__frame glide__slide">2</li>
+          <li class="slider__frame glide__slide">3</li>
+          <li class="slider__frame glide__slide">4</li>
+        </ul>
+      </div>
+      <div class="glide__arrows" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+      </div>
+      <div class="glide__bullets" data-glide-el="controls[nav]">
+        <button class="glide__bullet" data-glide-dir="=0"></button>
+        <button class="glide__bullet" data-glide-dir="=1"></button>
+        <button class="glide__bullet" data-glide-dir="=2"></button>
+        <button class="glide__bullet" data-glide-dir="=3"></button>
+        <button class="glide__bullet" data-glide-dir="=4"></button>
+      </div>
+    </div>
+    <div id="intro2" class="glide" style="margin-top: 32px;">
+      <div class="glide__track" data-glide-el="track">
+        <ul class="glide__slides">
+          <li class="slider__frame glide__slide">0</li>
+          <li class="slider__frame glide__slide">1</li>
+          <li class="slider__frame glide__slide">2</li>
+          <li class="slider__frame glide__slide">3</li>
+          <li class="slider__frame glide__slide">4</li>
+        </ul>
+      </div>
+      <div class="glide__arrows" data-glide-el="controls">
+        <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+        <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+      </div>
+      <div class="glide__bullets" data-glide-el="controls[nav]">
+        <button class="glide__bullet" data-glide-dir="=0"></button>
+        <button class="glide__bullet" data-glide-dir="=1"></button>
+        <button class="glide__bullet" data-glide-dir="=2"></button>
+        <button class="glide__bullet" data-glide-dir="=3"></button>
+        <button class="glide__bullet" data-glide-dir="=4"></button>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/glide.min.js" integrity="sha512-2sI5N95oT62ughlApCe/8zL9bQAXKsPPtZZI2KE3dznuZ8HpE2gTMHYzyVN7OoSPJCM1k9ZkhcCo3FvOirIr2A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      var glide = new Glide('#intro', {
+        type: 'carousel',
+        perView: 4,
+        focusAt: 'center',
+        // autoplay: 2000,
+        breakpoints: {
+          800: {
+            perView: 3.6,
+          },
+          480: {
+            perView: 1
+          }
+        }
+      })
+
+      glide.on('run.after', function () {
+        console.log('ran')
+      })
+
+      glide.mount()
+    </script>
+    <script>
+      var glide2 = new Glide('#intro2', {
+        type: 'carousel',
+        perView: 4,
+        focusAt: 'center',
+        // autoplay: 2000,
+        breakpoints: {
+          800: {
+            perView: 3.6,
+          },
+          480: {
+            perView: 1
+          }
+        }
+      })
+
+      glide2.on('run.after', function () {
+        console.log('ran')
+      })
+
+      glide2.mount()
+    </script>
+
+  </body>
+
+</html>
